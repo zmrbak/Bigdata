@@ -18,7 +18,7 @@ namespace Bigdata
         {
             String result = "1";
             String error_msg = "";
-            String count_by_here = "";
+            String count_by_here = "0";
             String count_by_all = "";
 
             string connStr = String.Format("User Id={0};Password={1};Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST={2})(PORT={3})))(CONNECT_DATA=(SERVICE_NAME={4})))",
@@ -48,8 +48,7 @@ namespace Bigdata
                     cmd.CommandText = "SELECT count(*) FROM  阅览日志 WHERE 登到时间 BETWEEN to_date('"+ start_time + "','yyyy-mm-dd hh24:mi:ss') AND  to_date('" + end_time + "','yyyy-mm-dd hh24:mi:ss')";
                     //cmd.Parameters.AddRange(parameters);
                     object CameCount=cmd.ExecuteScalar();
-                    count_by_here = CameCount.ToString();
-                    count_by_all = count_by_here;
+                    count_by_all = CameCount.ToString();
                 }
             }
 
