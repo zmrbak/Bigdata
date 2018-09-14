@@ -40,12 +40,12 @@ namespace Bigdata
 
             if (start_time == "")
             {
-                start_time = DateTime.Now.ToString("yyyyMMdd") + " 00:00:00";
+                start_time = DateTime.Now.ToString("yyyy-MM-dd") + " 00:00:00";
             }
 
             if (end_time == "")
             {
-                end_time = DateTime.Now.ToString("yyyy-mm-dd HH-MM-ss");
+                end_time = DateTime.Now.ToString("yyyy-MM-dd HH-mm-ss");
             }
 
             JArray jArray = new JArray();
